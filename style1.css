@@ -1,0 +1,514 @@
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: beige;
+}
+
+/* HEADER */
+.top-bar {
+    background: #7c2d12;
+    margin: 20px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+
+.logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-pill {
+    background: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+.nav-pill a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+/* HERO */
+.hero-box {
+     background: beige;
+    margin: 20px;
+    border-radius: 30px;
+    padding: 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+.hero-img {
+     margin:-70px 0 30px;
+     width:160px;
+}
+
+.hero-img img {
+    width: 100%;
+}
+.hero-left{
+    margin:-150px 0 30px;
+    flex:1;
+}
+
+.hero-left h1 {
+    font-size: 42px;
+    color: #7c2d12;
+    margin: 0;
+}
+
+.hero-para {
+    width: calc(100% - 450px); /* leaves space for bakery image */
+    margin-left: 130px;        /* aligns under heading */
+}
+
+.hero-para p {
+    font-size: 30px;
+    margin: -150px 0 30px;
+}
+
+.cta {
+    background: #f26b8a;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-right  {
+    width: 370px;
+}
+
+.hero-right img {
+    width: 100%;
+}
+
+/* SECTIONS */
+.section {
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.section h2 {
+    color: #7c2d12;
+    font-size: 28px;
+}
+
+/* SPECIALTIES */
+.specialties {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 10px;
+}
+
+.spec-card {
+    background: #d6a77a;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.spec-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.spec-card p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* POPULAR */
+.light {
+    background: transparent;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+/* POPULAR ITEMS CONTAINER */
+.pills {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+
+/* EACH PILL BOX (THE BOX YOU WANTED) */
+.pill {
+    background: #d6a77a;
+    padding: 20px 25px;
+    border-radius: 20px;
+    width: 200px;       
+    height:80px;          /* 👈 box width */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+/* IMAGE + TEXT ROW */
+.item-row {
+    display: flex;
+    align-items: center;          /* vertical alignment */
+    gap: 15px;                    /* space between image & text */
+    text-decoration: none;
+}
+
+/* IMAGE */
+.item-row img {
+    width: 100px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.item-link {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c2d12;
+    white-space: nowrap;
+}
+
+/* MENU CONTAINER */
+.menu {
+    max-width: 900px;      /* 👈 controls overall menu width */
+    margin: auto;
+}
+
+/* MENU ITEM (ORDER BOX) */
+.menu-item {
+    max-width: 800px;      /* 👈 reduces individual order width */
+    margin: 0 auto 30px;   /* 👈 centers the box */
+    
+    background: beige;
+    display: flex;
+    align-items: center;
+    padding: 25px 30px;
+    border-radius: 30px;
+}
+
+/* IMAGE */
+.menu-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-right: 20px;           /* space between image & text */
+}
+
+/* TEXT COLUMN (name + price stacked) */
+.menu-text {
+    display: flex;
+    flex-direction: column;       /* 👈 stacks name & price */
+    align-items: flex-start;      /* 👈 left aligned */
+}
+
+/* NAME */
+.menu-text h3 {
+    margin: 0;
+    color: #7c2d12;
+    font-size: 22px;
+}
+
+/* PRICE (comes directly below name) */
+.menu-text p {
+    margin: 6px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-action {
+    margin-left: auto;
+    
+}
+
+/* PUSH BUTTON TO FAR RIGHT */
+.order-btn {
+    margin-left: auto;            /* 👈 magic line */
+    background: #7c2d12;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.order-btn:hover {
+    background: #e09f00;
+}
+
+/* CONTACT */
+.contact-box {
+    background: #d6a77a;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+/* PLACE ORDER SECTION */
+.place-order {
+    background: beige;
+    margin: 20px;
+    border-radius: 30px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.place-order h2 {
+    font-size: 36px;
+    color: #7c2d12;
+    margin-bottom: 25px;
+}
+
+.order-details {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.order-details p {
+    font-size: 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #374151;
+}
+
+.order-details span {
+    font-size: 22px;
+}
+
+.order-whatsapp {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #facc15, #eab308);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.order-whatsapp:hover {
+    transform: translateY(-4px);
+}
+
+/* FOOTER */
+.footer {
+    background: #7c2d12;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ece5dd, #d9fdd3);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* MAIN WHATSAPP CONTAINER */
+.whatsapp {
+    width: 380px;
+    height: 650px;
+    margin: 30px auto;
+    background: #efeae2;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER BAR */
+.header {
+    background: linear-gradient(135deg, #075e54, #128c7e);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+/* CHAT AREA */
+.chat {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background-image: logo.jpeg;
+    background-size: cover;
+}
+
+/* CHAT BUBBLES */
+.bot, .user {
+    max-width: 78%;
+    padding: 11px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+/* BOT MESSAGE */
+.bot {
+    background: #ffffff;
+    border-radius: 18px 18px 18px 6px;
+}
+
+/* USER MESSAGE */
+.user {
+    background: #dcf8c6;
+    margin-left: auto;
+    border-radius: 18px 18px 6px 18px;
+}
+
+/* ACTION BUTTONS */
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 25px;
+    border: none;
+    background: #25d366;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(0.97);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.45);
+}
+
+/* SCROLLBAR STYLE */
+.chat::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+/* CONTACT HERO */
+.contact-hero {
+    text-align: center;
+    margin: 30px 20px;
+}
+
+.contact-hero h1 {
+    font-size: 36px;
+    color: #7c2d12;
+    margin-bottom: 10px;
+}
+
+.contact-hero p {
+    font-size: 18px;
+    color: #6b7280;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 20px;
+    flex-wrap: wrap;
+}
+
+/* CONTACT CARDS */
+.contact-card {
+    background: #fff7ed;
+    width: 260px;
+    padding: 30px 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+}
+
+.contact-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    color: #7c2d12;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.contact-card span {
+    font-weight: bold;
+    color: #374151;
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* NOTE */
+.contact-note {
+    text-align: center;
+    margin: 40px 20px;
+    font-size: 15px;
+    color: #374151;
+}
+.rating-filter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.rating-filter button {
+    margin: 0 8px;
+    padding: 10px 18px;
+    border-radius: 20px;
+    border: none;
+    background: #7c2d12;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rating {
+    font-size: 14px;
+    color: #f59e0b;
+    margin-top: 4px;
+}

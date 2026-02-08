@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Order | Home Food Bakers</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+        🍰 <span>Home Food Bakers</span>
+    </div>
+    <nav class="nav-pill">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Orders</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="whatsapp">
+    <div class="header">🍰 Home Food Bakers</div>
+
+    <div class="chat" id="chat">
+        <div class="bot">
+            Hi 👋 Welcome to <b>Home Food Bakers</b> 😊  
+            <br><br>Please choose a product 👇
+        </div>
+
+        <!-- PRODUCTS -->
+        <button class="btn" onclick="selectItem('Chocolate Cake', 500)">
+            🎂 Chocolate Cake – ₹500
+        </button>
+
+        <button class="btn" onclick="selectItem('Brownies', 150)">
+            🍫 Brownies – ₹150
+        </button>
+
+        <button class="btn" onclick="selectItem('Cupcakes', 200)">
+            🧁 Cupcakes – ₹200
+        </button>
+
+        <button class="btn" onclick="selectItem('Cookies', 120)">
+            🍪 Cookies – ₹120
+        </button>
+    </div>
+</div>
+
+<script>
+let itemName = "";
+let itemPrice = 0;
+let quantity = 1;
+
+function selectItem(name, price) {
+    itemName = name;
+    itemPrice = price;
+
+    addUserMsg(name);
+    addBotMsg("Nice choice 😍<br>How many do you want?");
+
+    showQuantityButtons();
+}
+
+function showQuantityButtons() {
+    const chat = document.getElementById("chat");
+
+    for (let i = 1; i <= 5; i++) {
+        const btn = document.createElement("button");
+        btn.className = "btn";
+        btn.innerText = i + " Qty";
+        btn.onclick = () => selectQuantity(i);
+        chat.appendChild(btn);
+    }
+
+    chat.scrollTop = chat.scrollHeight;
+}
+
+function selectQuantity(qty) {
+    quantity = qty;
+    addUserMsg(qty + " Qty");
+
+    const total = itemPrice * quantity;
+
+    addBotMsg(
+        "🧾 <b>Order Summary</b><br>" +
+        "📦 Item: " + itemName + "<br>" +
+        "🔢 Quantity: " + quantity + "<br>" +
+        "💰 Total: ₹" + total +
+        "<br><br>Please select payment option 👇"
+    );
+
+    showPaymentButtons();
+}
+
+function showPaymentButtons() {
+    const chat = document.getElementById("chat");
+    const payments = ["Google Pay", "PhonePe", "Cash on Delivery"];
+
+    payments.forEach(method => {
+        const btn = document.createElement("button");
+        btn.className = "btn";
+        btn.innerText = method;
+        btn.onclick = () => finishOrder(method);
+        chat.appendChild(btn);
+    });
+
+    chat.scrollTop = chat.scrollHeight;
+}
+
+function finishOrder(method) {
+    addUserMsg(method);
+
+    addBotMsg(
+        "✅ <b>Order Confirmed!</b> 🎉<br>" +
+        "💳 Payment Mode: " + method + "<br>" +
+        "🕒 Our team will contact you shortly<br>" +
+        "❤️ Thank you for choosing Home Food Bakers"
+    );
+}
+
+function addBotMsg(text) {
+    const div = document.createElement("div");
+    div.className = "bot";
+    div.innerHTML = text;
+    document.getElementById("chat").appendChild(div);
+}
+
+function addUserMsg(text) {
+    const div = document.createElement("div");
+    div.className = "user";
+    div.innerText = text;
+    document.getElementById("chat").appendChild(div);
+}
+</script>
+
+</body>
+</html>

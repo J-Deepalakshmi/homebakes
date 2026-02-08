@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu | Home Food Bakers</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<header class="top-bar">
+    <div class="logo">
+<span>🍰 Home Food Bakers<span></div>
+    <nav class="nav-pill">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="orders.html">Orders</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="section menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-item" data-rating="4.5">
+    <img src="cake.jpeg">
+    <div class="menu-text">
+        <h3>Chocolate Cake</h3>
+        <p>₹500</p>
+        <span class="rating">⭐ 4.5</span>
+    </div>
+    <div class="menu-action">
+        <a href="orders.html" class="order-btn">Place Order</a>
+    </div>
+</div>
+
+    
+</div>
+
+    
+   <div class="menu-item" data-rating="4">
+    <img src="brownies.jpeg">
+    <div class="menu-text">
+        <h3>Browine</h3>
+        <p>₹500</p>
+        <span class="rating">⭐ 4</span>
+    </div>
+    <div class="menu-action">
+        <a href="orders.html" class="order-btn">Place Order</a>
+    </div>
+</div>
+
+    
+</div>
+
+    <div class="menu-item" data-rating="3.5">
+    <img src="cupcake.jpeg">
+    <div class="menu-text">
+        <h3>Cupcakes</h3>
+        <p>₹250</p>
+        <span class="rating">⭐ 3.5</span>
+    </div>
+    <div class="menu-action">
+        <a href="orders.html" class="order-btn">Place Order</a>
+    </div>
+</div>
+</div>
+
+  <div class="menu-item" data-rating="3.8">
+    <img src="muffins.jpeg">
+    <div class="menu-text">
+        <h3>Muffins</h3>
+        <p>₹500</p>
+        <span class="rating">⭐ 3.8</span>
+    </div>
+    <div class="menu-action">
+        <a href="orders.html" class="order-btn">Place Order</a>
+    </div>
+</div>
+</div>
+  
+     <div class="menu-item" data-rating="2">
+    <img src="Cookies.jpeg">
+    <div class="menu-text">
+        <h3>Cookies</h3>
+        <p>₹700</p>
+        <span class="rating">⭐ 2</span>
+    </div>
+    <div class="menu-action">
+        <a href="orders.html" class="order-btn">Place Order</a>
+    </div>
+</div>
+</div>
+
+<div class="rating-filter">
+    <button onclick="filterRating(0)">All</button>
+    <button onclick="filterRating(4)">⭐ 4 & above</button>
+    <button onclick="filterRating(3)">⭐ 3 & above</button>
+</div>
+<script>
+function filterRating(minRating) {
+    const items = document.querySelectorAll(".menu-item");
+
+    items.forEach(item => {
+        const rating = parseFloat(item.dataset.rating);
+        if (rating >= minRating) {
+            item.style.display = "flex";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+</script>
+
+
+</section>
+
+</body>
+</html>
